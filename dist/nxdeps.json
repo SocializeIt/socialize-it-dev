@@ -1,0 +1,34 @@
+{
+  "customer-portal": [
+    {
+      "projectName": "auth",
+      "type": "es6Import"
+    },
+    {
+      "projectName": "user-profile",
+      "type": "loadChildren"
+    }
+  ],
+  "user-profile": [
+    {
+      "projectName": "data-models",
+      "type": "es6Import"
+    },
+    {
+      "projectName": "auth",
+      "type": "es6Import"
+    }
+  ],
+  "data-models": [],
+  "material": [],
+  "auth": [
+    {
+      "projectName": "material",
+      "type": "es6Import"
+    },
+    {
+      "projectName": "data-models",
+      "type": "es6Import"
+    }
+  ]
+}

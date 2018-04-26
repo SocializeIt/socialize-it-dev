@@ -29,4 +29,9 @@ export class AuthGuard implements CanActivate {
       return false;
     }
   }
+
+  gotoProfile() {
+    const authInfos = this.authSrv.getAuthVariables();
+    this.router.navigate([`/auth/user-profile/${authInfos.uid}`]);
+  }
 }

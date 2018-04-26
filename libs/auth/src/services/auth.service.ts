@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Authenticate } from '@socialise-it/data-models';
 import * as firebase from 'firebase';
+import { promise } from 'protractor';
 
 @Injectable()
 export class AuthService {
@@ -41,6 +42,8 @@ export class AuthService {
   login(authenticate: Authenticate) {
     return this.afAuth.auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider()
-    );
+    ).then(()=>{
+      return this.getAuthVariables();
+    });
   }
 }
